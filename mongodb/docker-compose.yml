@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  database:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: yuana
+      MONGO_INITDB_ROOT_PASSWORD: passworddb
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-data:/data/db
+
+volumes:
+  mongodb-data:
