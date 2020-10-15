@@ -10,5 +10,15 @@ services:
       - mysql-data:/var/lib/mysql # persist data even if container shuts down
     ports: 
       - 3306:3306
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: passwordroot
 volumes:
   mysql-data: # named volumes can be managed easier using docker-compose
