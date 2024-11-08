@@ -23,6 +23,7 @@ services:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
+      - ./backup:/tmp/odoobackup #we can set the local path of auto backup to /tmp/odoobackup
     environment:
       - PASSWORD_FILE=/run/secrets/postgresql_password
     secrets:

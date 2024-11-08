@@ -1,5 +1,4 @@
 [options]
-admin_passwd = $pbkdf2-sha512$600000$7l1LaQ3BeG.t1bqXMgYAwA$ojnsqU.ecRrA7J1fRuSh5wZnBqUiTtCVAeVwp760tpmYBf3FYe2zex9LoO//MZ0omg7GSMJ6m.jzp3zSSL4gjQ
 addons_path = /usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons
 ; data_dir = /var/lib/odoo
 ; admin_passwd = admin
@@ -18,7 +17,7 @@ debug_mode = True
 ; limit_time_real = 120
 ; list_db = True
 ; log_db = False
-; log_handler = [':INFO']
+log_handler = [':DEBUG']
 ; log_level = info
 ; logfile = None
 ; logfile = /var/log/odoo/odoo.log
